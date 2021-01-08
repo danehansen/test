@@ -1,9 +1,10 @@
-@import '../styles/colors.module.scss';
-@import '../styles/shared.module.scss';
-@import '../styles/typography.module.scss';
+@import 'styles/colors.module.scss';
+@import 'styles/shared.module.scss';
+@import 'styles/typography.module.scss';
 
 body {
   margin: 0;
+  background: $gray097;
 }
 
 a {
@@ -20,14 +21,12 @@ dd, dl, h1, h2, h3, p {
 }
 
 .root {
-  background: $gray097;
   color: $gray013;
   margin: 0 auto;
   max-width: 1040px;
   padding: 50px 43px;
 
   &.darkmode {
-    background: $black000;
     color: $white100;
   }
 }

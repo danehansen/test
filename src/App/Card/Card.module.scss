@@ -1,9 +1,10 @@
-@import '../../styles/colors.module.scss';
-@import '../../styles/shared.module.scss';
-@import '../../styles/typography.module.scss';
+@import 'styles/colors.module.scss';
+@import 'styles/shared.module.scss';
+@import 'styles/typography.module.scss';
 
 .root {
   background: $white100;
+  filter: drop-shadow(1px 3px 4px rgba($gray013, 0.1));
   transition: filter 0.2s;
 
   &:hover {
@@ -17,6 +18,7 @@
   &.darkmode {
     background: $gray013;
     color: $white100;
+    filter: drop-shadow(1px 3px 4px rgba($white100, 0.1));
 
     &:hover {
       filter: drop-shadow(1px 3px 4px rgba($white100, 0.3));
@@ -33,18 +35,24 @@
 }
 
 .top {
+  background: $gray088;
   height: $cardImgHeight;
   overflow: hidden;
   position: relative;
 }
 
 .img {
-  background: $gray088;
   display: block;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
   width: 100%;
+  opacity: 0;
+  transition-delay: 0.5s;
+
+  &.loaded {
+    opacity: 1;
+  }
 }
 
 .bottom {

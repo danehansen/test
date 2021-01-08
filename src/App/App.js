@@ -5,6 +5,10 @@ import getData from './getData';
 import styles from './App.module.scss';
 import Toggle from './Toggle/Toggle';
 import { useState } from 'react';
+import colorStyles from 'styles/colors.module.scss';
+
+const DARK = colorStyles.black000;
+const LIGHT = colorStyles.gray097;
 
 // add as many cards as you would like here
 const DATA = getData(10);
@@ -18,7 +22,9 @@ export default function App() {
         <label className={styles.label}>
           darkmode
           <Toggle checked={darkmode} darkmode={darkmode} onChange={function({target: {checked}}){
-            setDarkmode(checked)}} />
+            document.body.style.background = checked ? DARK : LIGHT
+            setDarkmode(checked);
+          }} />
         </label>
       </div>
       <CardHolder>

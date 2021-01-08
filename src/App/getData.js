@@ -1,5 +1,5 @@
 import { random, randomItem } from '@danehansen/math';
-import sharedStyles from '../styles/shared.module.scss';
+import sharedStyles from 'styles/shared.module.scss';
 
 // this entire file is producing randomized simulated data
 
