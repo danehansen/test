@@ -1,0 +1,9 @@
+$cardGap: 32px;
+$cardImgHeight: 112px;
+$cardWidth: 280px;
+
+:export {
+  cardGap: $cardGap;
+  cardImgHeight: $cardImgHeight;
+  cardWidth: $cardWidth;
+}

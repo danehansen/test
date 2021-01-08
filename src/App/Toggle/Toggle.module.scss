@@ -1,0 +1,46 @@
+@import '../../styles/colors.module.scss';
+
+.root {
+  $height: 20px;
+  $padding: 3px;
+  $width: 40px;
+  $dotSize: $height - $padding * 2;
+  appearance: none;
+  background: $gray013;
+  border: none;
+  border-radius: $height * 0.5;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: $height;
+  margin: 0 0 0 5px;
+  outline: none;
+  padding: $padding;
+  position: relative;
+  width: $width;
+
+  &.darkmode {
+    background: $gray088;
+
+    &:after {
+      background: $gray013;
+    }
+  }
+
+  &:after {
+    background: $white100;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: $dotSize;
+    left: $padding;
+    position: absolute;
+    transition: transform 0.2s;
+    width: $dotSize;
+  }
+
+  &:checked {
+    &:after {
+      transform: translateX($width - $dotSize - $padding * 2);
+    }
+  }
+}

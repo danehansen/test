@@ -1,0 +1,8 @@
+@import '../../styles/shared.module.scss';
+
+.root {
+  column-gap: $cardGap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($cardWidth, auto));
+  row-gap: $cardGap;
+}

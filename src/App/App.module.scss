@@ -1,0 +1,46 @@
+@import '../styles/colors.module.scss';
+@import '../styles/shared.module.scss';
+@import '../styles/typography.module.scss';
+
+body {
+  margin: 0;
+}
+
+a {
+  color: $gray013;
+  transition: color 0.2s;
+
+  &:hover {
+    color: lighten($gray013, 50%);
+  }
+}
+
+dd, dl, h1, h2, h3, p {
+  margin: 0;
+}
+
+.root {
+  background: $gray097;
+  color: $gray013;
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 50px 43px;
+
+  &.darkmode {
+    background: $black000;
+    color: $white100;
+  }
+}
+
+.header {
+  padding-bottom: 10px;
+  text-align: right;
+}
+
+.label {
+  @include inter(11px, 600);
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  text-transform: uppercase;
+}

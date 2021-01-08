@@ -1,0 +1,11 @@
+@mixin inter($size: 12px, $weight: regular, $style: normal) {
+  font-family: Inter, Helvetica, sans;
+  @if $weight == regular {
+    line-height: 170%;
+  } @else {
+    line-height: 120%;
+  }
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+}

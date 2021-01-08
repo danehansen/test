@@ -1,0 +1,79 @@
+@import '../../styles/colors.module.scss';
+@import '../../styles/shared.module.scss';
+@import '../../styles/typography.module.scss';
+
+.root {
+  background: $white100;
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: drop-shadow(1px 3px 4px rgba($gray013, 0.5));
+
+    .img {
+      transform: scale(1.1);
+    }
+  }
+
+  &.darkmode {
+    background: $gray013;
+    color: $white100;
+
+    &:hover {
+      filter: drop-shadow(1px 3px 4px rgba($white100, 0.3));
+    }
+
+    .link {
+      color: $white100;
+
+      &:hover {
+        color: darken($white100, 50%);
+      }
+    }
+  }
+}
+
+.top {
+  height: $cardImgHeight;
+  overflow: hidden;
+  position: relative;
+}
+
+.img {
+  background: $gray088;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+  width: 100%;
+}
+
+.bottom {
+  @include inter();
+  padding: 8px 16px;
+}
+
+.title {
+  @include inter(16px, 600);
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  @include inter(14px);
+  line-height: 140%;
+  margin-bottom: 6px;
+}
+
+.attributes {
+  border-top: 1px solid $gray088;
+  column-gap: 10px;
+  display: grid;
+  grid-template-columns: 70px auto;
+  padding-top: 19px;
+}
+
+$keyWidth: 80px;
+
+.key {
+  @include inter(null, 600);
+  line-height: inherit;
+}
